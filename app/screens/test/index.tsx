@@ -6,8 +6,8 @@ function TestScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Hello Pusaka Mobile</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        {/* <Text style={styles.title}>Hello Pusaka Mobile</Text>
+        <Text style={styles.subtitle}>This is the first page of your app.</Text> */}
         <FormApps />
       </View>
     </View>

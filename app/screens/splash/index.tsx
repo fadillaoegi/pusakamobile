@@ -1,28 +1,20 @@
 import React from "react";
-// import { StyleSheet, Text, View } from "react-native";
 import { View, Text, StyleSheet, ImageBackground } from "react-native";
 
-import TestScreen from "./screens/test";
-import SplashScreen from "./screens/splash";
-
-// Fungsi Page, menggunakan export default
-function MainApp() {
+const SplashScreen = () => {
   return (
     <ImageBackground style={styles.background}>
       <View style={styles.container}>
         <Text style={[styles.fonts, styles.text]}>Pusaka Mobile</Text>
       </View>
     </ImageBackground>
-    // <View>
-    //   {/* <TestScreen /> */}
-    //   <SplashScreen />
-    // </View>
   );
-}
+};
+
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    resizeMode: "cover",
+    resizeMode: "contain",
   },
   container: {
     flex: 1,
@@ -31,7 +23,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    textAlign: "center", // Memusatkan teks secara horizontal jika diperlukan
+    textAlign: "center",
+    fontWeight: "bold",
   },
   fonts: {
     fontFamily: "nunito",
@@ -40,13 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: "flex-start",
-//     justifyContent: "flex-start",
-//     padding: 24,
-//   },
-// });
-
-export default MainApp;
+export default SplashScreen;
