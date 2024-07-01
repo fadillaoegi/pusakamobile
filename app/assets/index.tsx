@@ -1,0 +1,1 @@
+export const bgApps = require("./images/bg.png");
