@@ -1,4 +1,11 @@
-import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  ScrollView,
+  TextInput,
+} from "react-native";
 import React from "react";
 import { bgApps } from "@/app/assets";
 
@@ -11,7 +18,11 @@ export const LoginScreen = () => {
     >
       <View style={styles.container}>
         <View style={styles.card}>
-          <Text style={styles.text}> Login Screen</Text>
+          <View style={styles.subCard}>
+            <Text style={styles.textTitle}> Login Screen</Text>
+            <Text style={styles.textLabel}> Email atau Username</Text>
+            <TextInput />
+          </View>
         </View>
       </View>
     </ImageBackground>
@@ -32,13 +43,25 @@ const styles = StyleSheet.create({
   card: {
     width: 370,
     height: 370,
-    justifyContent: "center",
+    padding: 20,
+    alignContent: "center",
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 20,
   },
-  text: {
-    fontSize: 18,
+  subCard: {
+    alignContent: "flex-start",
+  },
+  textTitle: {
+    fontSize: 20,
+    color: "#000",
+    marginBottom: 40,
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
+  },
+  textLabel: {
+    fontSize: 14,
     color: "#000",
   },
 });
